@@ -12,6 +12,9 @@ router.get('/home', (req, res) => {
 router.get('/skills',(req,res)=>{
     res.render('./pages/skills.ejs',{title:"skill page"})
 })
+router.get('/my-cv',(req,res)=>{
+    res.render('./pages/cv.ejs',{title:"my-cv"})
+})
 
 router.get('/about',(req,res)=>{
     res.render('./pages/about.ejs',{title:"about page"})
