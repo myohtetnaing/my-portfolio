@@ -1,32 +1,13 @@
 const express = require('express')
 const router = express.Router()
+const title = "Myo Htet Naing - A Full Stack Developer"
 
 router.get('/',(req,res)=>{
-    res.render('./pages/home.ejs',{title:"home page"})
+    res.render('./pages/index.ejs',{title})
 })
 
-router.get('/home', (req, res) => {
-    res.redirect('/');
-});
-
-router.get('/skills',(req,res)=>{
-    res.render('./pages/skills.ejs',{title:"skill page"})
-})
-router.get('/my-cv',(req,res)=>{
-    res.render('./pages/cv.ejs',{title:"my-cv"})
-})
-
-router.get('/about',(req,res)=>{
-    res.render('./pages/about.ejs',{title:"about page"})
-})
-
- 
-
-
-
-
-
-
-
+router.use((req, res) => { 
+    res.status(404).render('./pages/notFound',{title})
+  }) 
 
 module.exports = router
