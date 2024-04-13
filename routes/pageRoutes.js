@@ -5,8 +5,6 @@ const title = "Myo Htet Naing - A Full Stack Developer"
 router.get('/',(req,res)=>{
     res.render('./pages/index.ejs',{title})
 })
-<<<<<<< HEAD
-=======
 router.get('/whoami',(req,res)=>{
     res.redirect('/#whoami')
 })
@@ -19,9 +17,9 @@ router.get('/projects',(req,res)=>{
 router.get('/blog',(req,res)=>{
     res.redirect('/#blog')
 })
-
->>>>>>> 4d3b7e8 (Update Some Feature)
-
+router.get('/contact',(req,res)=>{
+    res.redirect('/#contact')
+})
 router.use((req, res) => { 
     res.status(404).render('./pages/notFound',{title})
   }) 
